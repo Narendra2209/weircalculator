@@ -1,0 +1,198 @@
+/* === Container Styling === */
+.main-container {
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+}
+
+/* === Logo Styling === */
+.logo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.company-name {
+  font-size: 42px;
+  color: #334155;
+}
+
+.company-logo {
+  height: 60%;
+}
+
+/* === Heading Styling (SUMP & WIER) === */
+.sump-heading,
+.wier-heading {
+  background-color: #334155;
+  color: white;
+  padding: 15px 30px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* === Grid Layout for Image + Table === */
+.grid-2-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center contents horizontally */
+  justify-content: center; /* Center contents vertically */
+}
+
+
+/* === Image Box Styling === */
+.sump-image,
+.wire-image {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+.sump-image img,
+.wire-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+}
+
+/* === Labels on Image === */
+.label,
+.wire-label {
+  position: absolute;
+  background-color: rgba(30, 41, 59, 0.85);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Customize label positions using classes like label-A, wire-label-a, etc. */
+.label-A { top: 90%; left: 35%; }
+.label-B { top: 75%; left: 66%; }
+.label-C { top: 50%; left: 77%; }
+.label-1 { top: 15%; left: 77%; }
+.label-2 { top: 50%; left: 3%; }
+.label-3 { top: 22%; left: 40%; }
+
+.wire-label-a { top: 90%; left: 19%; }
+.wire-label-b { top: 80%; left: 57%; }
+.wire-label-c { top: 50%; left: 89%; }
+.wire-label-d { top: 22%; left: 92%; }
+.wire-label-e { top: 5%; left: 50%; }
+.wire-label-f { top: 54%; left: -2%; }
+.wire-label-g { top: 59%; left: 71%; }
+.wire-label-h { top: 67%; left: 65%; }
+.wire-label-three { top: 69%; left: -2%; }
+
+/* === Excel Table === */
+.excel-table {
+  width: 60%;
+  max-width: 500px;
+  border-collapse: collapse;
+  border-radius: 10px;
+  background-color: #f8f9fa;
+}
+
+.excel-table th,
+.excel-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.excel-table input {
+  width: 60%;
+  height: 20px;
+  font-size: 14px;
+  padding: 4px;
+}
+
+.excel-table th {
+  background-color: #cbd5e1;
+  font-weight: bold;
+  color: #1e293b;
+}
+
+.input-error {
+  border: 2px solid red;
+}
+
+.error-text {
+  color: red;
+  font-size: 12px;
+}
+
+/* === Button === */
+.button-right {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.calculate-button {
+  padding: 10px 20px;
+  background-color: #334155;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.calculate-button:hover {
+  background-color: #1e293b;
+}
+
+/* === Media Queries === */
+@media screen and (max-width: 450px) {
+  .grid-2-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .sump-image img,
+  .wire-image img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .excel-table {
+    max-width: 100%;
+  }
+
+  .logo-container {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+  .label,
+  .wire-label {
+    font-size: 10px;
+    padding: 2px 5px;
+  }
+
+  /* Headings resize */
+  .sump-heading,
+  .wier-heading {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+  .company-name {
+    font-size: 30px;
+  }
+}
